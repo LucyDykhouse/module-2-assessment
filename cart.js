@@ -33,9 +33,11 @@ const cart = [
     }
 ]
 
-//CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
+const summedPrice = cart.reduce((acc, curr) => acc + curr.price, 0);
+
+// Print statement
+// console.log(`The summed price is: ${summedPrice}`);
 
 
 //////////////////PROBLEM 2////////////////////
@@ -53,8 +55,9 @@ const cart = [
     decimals, for example: .06 for a 6% tax.
 */
 
-//CODE HERE
-
+const calcFinalPrice = function(cartTotal, couponValue, tax) {
+    return cartTotal + (cartTotal * tax) - couponValue;
+}
 
 
 //////////////////PROBLEM 3////////////////////
@@ -78,7 +81,10 @@ const cart = [
 */
 
 /*
-    TEXT ANSWER HERE
+    (1) The restaurant would need a NAME associated with the order to be able to distribute it. This will be a STRING as a name consists of characters.
+    (2) The restaurant would need a PHONE NUMBER to be able to contact the customer. This can also be a STRING as no mathematical operations need to be performed on the phone number.
+    (2) The restaurant would need an ADDRESS to deliver the order. This will be a STRING as it consists of characters.
+    (3) The restaurant would need to know if the customer is a REWARDS MEMBER so it can add points to the customer's account using the phone number. This status will be a BOOLEAN variable as the customer either is or isn't a member.
 
 */
 
@@ -87,4 +93,9 @@ const cart = [
     guidelines.
 */
 
-//CODE HERE
+const customer = {
+    name: 'John Smith',
+    phone: '1234567',
+    address: '123 Baker St.',
+    rewards: true
+}
